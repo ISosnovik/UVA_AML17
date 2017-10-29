@@ -1,0 +1,2 @@
+# Assignment 1
+The goal of this week is to provide you with a knowledge on basics of neural networks. We believe, that the best way to understand them is to write your own network almost from scratch. 
