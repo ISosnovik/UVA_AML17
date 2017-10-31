@@ -51,13 +51,13 @@ source deactivate
 A: You can install them with `conda` and/or `pip`. We will use *numpy, scipy, matplotlib* and *scikit-learn* for the assignments. We will use *requests* as well.
 
 ```
-source activate py36
+source activate py36 (or just `activate py36` for win)
 conda install -c anaconda numpy
 conda install -c anaconda scipy 
 conda install scikit-learn
 conda install -c conda-forge matplotlib
 conda install -c anaconda requests
-source deactivate
+source deactivate (or just `deactivate` for win)
 ```
 
 **Q: How can I get the materials from GitHub?**
