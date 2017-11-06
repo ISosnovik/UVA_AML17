@@ -5,7 +5,7 @@ import requests
 import numpy as np
 
 class Config:
-    remote = 'http://ec2-18-194-63-174.eu-central-1.compute.amazonaws.com:8080'
+    remote = 'http://ec2-18-194-63-174.eu-central-1.compute.amazonaws.com:8080/'
 
 def get_progress(user_id):
     print(Config.remote + 'submissions/' + str(user_id))
