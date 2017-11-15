@@ -6,7 +6,16 @@ import requests
 import shutil
 import numpy as np
 import hashlib
-import pickle
+
+try:
+    import cPickle as pickle
+except ImportError:
+    import pickle
+
+try:
+    FileNotFoundError
+except NameError:
+    FileNotFoundError = OSError
 
 
 class Config:
@@ -58,7 +67,10 @@ def __local_tests_are_valid():
 
 def __passed_local_tests(function, arg_keys):
     with open(Config.test_path, 'rb') as f:
-        test_data = pickle.load(f, encoding='latin1') 
+        try:
+            test_data = pickle.load(f, encoding='latin1') 
+        except TypeError:
+            test_data = pickle.load(f) 
     data = test_data[function.__name__]
     inputs = data['inputs']
     outputs = data['outputs']
