@@ -10,7 +10,7 @@ import pickle
 
 
 class Config:
-    host = 'http://localhost:8080/'
+    host = 'http://ec2-18-194-63-174.eu-central-1.compute.amazonaws.com:8080/'
     test_folder = 'local_tests'
     test_name = 'tests.pickle'
     test_path = os.path.join(test_folder, test_name)
