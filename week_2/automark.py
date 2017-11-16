@@ -28,8 +28,8 @@ class Config:
 def __remove_local_tests():
     try:
         os.remove(Config.test_path)
-        print('Current version of remote tests is deprecated. '
-              'Tests are removed.')
+        print('Current version of local tests is deprecated. '
+              'Outdated tests are removed.')
         sys.stdout.flush()
     except FileNotFoundError:
         pass
